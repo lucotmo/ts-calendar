@@ -1,6 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 const paths = require('./paths')
 
 module.exports = {
@@ -41,10 +40,6 @@ module.exports = {
         ],
       },
     }),
-    new MiniCssExtractPlugin(),
-    new WorkboxWebpackPlugin.InjectManifest({
-      swSrc: `${paths.srcDir}/sw.ts`,
-      swDest: `${paths.publicDir}/sw.js`,
-    })
+    new MiniCssExtractPlugin()
   ],
 }

@@ -49,14 +49,14 @@ module.exports = {
   plugins: [
     new DotEnv(),
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: `${paths.srcDir}/${paths.staticFolder}`,
-          to: `${paths.publicDir}`,
-        },
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: `${paths.srcDir}/${paths.staticFolder}`,
+    //       to: `${paths.publicDir}`,
+    //     },
+    //   ],
+    // }),
     new HtmlWebpackPlugin({
       title: 'Calendar App',
       favicon: `${paths.srcDir}/${paths.imagesFolder}/favicon.ico`,
